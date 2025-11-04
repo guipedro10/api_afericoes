@@ -1,7 +1,7 @@
-package com.apijob.service;
+package com.api.service;
 
-import com.apijob.model.Afericao;
-import com.apijob.repository.AfericaoRepository;
+import com.api.model.Afericao;
+import com.api.repository.AfericaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

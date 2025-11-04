@@ -1,8 +1,6 @@
-# Script de teste completo da API
 
 Write-Host "=== Teste da API de Aferições ===" -ForegroundColor Green
 
-# 1. Autenticar
 Write-Host "`n1. Autenticando..." -ForegroundColor Yellow
 $body = @{
     nomeDeUsuario = "admin"
@@ -25,7 +23,6 @@ $headers = @{
     "Content-Type" = "application/json"
 }
 
-# 2. Criar aferição
 Write-Host "`n2. Criando nova aferição..." -ForegroundColor Yellow
 $novaAfericao = @{
     idSensor = "SENSOR001"
@@ -44,7 +41,6 @@ try {
     Write-Host $_.Exception.Message -ForegroundColor Red
 }
 
-# 3. Listar todas
 Write-Host "`n3. Listando todas as aferições..." -ForegroundColor Yellow
 try {
     $afericoes = Invoke-RestMethod -Uri "http://localhost:8080/afericoes" -Method GET -Headers $headers
@@ -57,7 +53,6 @@ try {
     Write-Host $_.Exception.Message -ForegroundColor Red
 }
 
-# 4. Buscar por ID
 if ($afericaoId) {
     Write-Host "`n4. Buscando aferição por ID ($afericaoId)..." -ForegroundColor Yellow
     try {
@@ -69,7 +64,6 @@ if ($afericaoId) {
         Write-Host $_.Exception.Message -ForegroundColor Red
     }
 
-    # 5. Atualizar
     Write-Host "`n5. Atualizando aferição..." -ForegroundColor Yellow
     $afericaoAtualizada = @{
         idSensor = "SENSOR001"
@@ -86,7 +80,6 @@ if ($afericaoId) {
         Write-Host $_.Exception.Message -ForegroundColor Red
     }
 
-    # 6. Deletar
     Write-Host "`n6. Deletando aferição..." -ForegroundColor Yellow
     try {
         Invoke-RestMethod -Uri "http://localhost:8080/afericoes/$afericaoId" -Method DELETE -Headers $headers

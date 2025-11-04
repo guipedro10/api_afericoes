@@ -1,4 +1,4 @@
-package com.apijob.dto;
+package com.api.dto;
 
 public class AuthResponse {
     private String token;

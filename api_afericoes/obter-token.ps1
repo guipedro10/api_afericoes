@@ -1,4 +1,3 @@
-# Script para obter token JWT da API
 
 Write-Host "=== Obtendo Token JWT ===" -ForegroundColor Green
 

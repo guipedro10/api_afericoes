@@ -1,6 +1,6 @@
-package com.apijob.repository;
+package com.api.repository;
 
-import com.apijob.model.Afericao;
+import com.api.model.Afericao;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

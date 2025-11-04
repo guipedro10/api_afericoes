@@ -1,8 +1,8 @@
-package com.apijob.service;
+package com.api.service;
 
-import com.apijob.config.DataInitializer;
-import com.apijob.dto.AuthRequest;
-import com.apijob.dto.AuthResponse;
+import com.api.config.DataInitializer;
+import com.api.dto.AuthRequest;
+import com.api.dto.AuthResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -20,14 +20,12 @@ public class AuthService {
         String nomeUsuario = authRequest.getNomeDeUsuario();
         String senha = authRequest.getSenha();
 
-        // Verificar se o usuário existe
         String senhaHash = DataInitializer.USUARIOS.get(nomeUsuario);
         
         if (senhaHash == null || !passwordEncoder.matches(senha, senhaHash)) {
-            return null; // Credenciais inválidas
+            return null; 
         }
 
-        // Gerar token JWT
         String token = jwtService.generateToken(nomeUsuario);
         
         return new AuthResponse(token);

@@ -1,8 +1,8 @@
-package com.apijob.controller;
+package com.api.controller;
 
-import com.apijob.dto.AuthRequest;
-import com.apijob.dto.AuthResponse;
-import com.apijob.service.AuthService;
+import com.api.dto.AuthRequest;
+import com.api.dto.AuthResponse;
+import com.api.service.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

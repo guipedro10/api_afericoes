@@ -1,6 +1,6 @@
-package com.apijob.config;
+package com.api.config;
 
-import com.apijob.security.JwtAuthenticationFilter;
+import com.api.security.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

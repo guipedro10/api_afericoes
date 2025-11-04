@@ -1,4 +1,4 @@
-package com.apijob.service;
+package com.api.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

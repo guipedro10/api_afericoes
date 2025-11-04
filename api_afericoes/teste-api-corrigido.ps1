@@ -1,8 +1,6 @@
-# Script de teste completo e corrigido da API
 
 Write-Host "=== TESTE DA API - VERSAO CORRIGIDA ===" -ForegroundColor Green
 
-# PASSO 1: Autenticar e obter token
 Write-Host ""
 Write-Host "[PASSO 1] Autenticando..." -ForegroundColor Yellow
 
@@ -25,7 +23,6 @@ try {
     exit 1
 }
 
-# PASSO 2: Criar uma nova afericao
 Write-Host ""
 Write-Host "[PASSO 2] Criando nova afericao..." -ForegroundColor Yellow
 
@@ -56,7 +53,6 @@ try {
     Write-Host "Detalhes: $_" -ForegroundColor Red
 }
 
-# PASSO 3: Listar todas as afericoes
 Write-Host ""
 Write-Host "[PASSO 3] Listando todas as afericoes..." -ForegroundColor Yellow
 
@@ -82,7 +78,6 @@ try {
     Write-Host "Detalhes: $_" -ForegroundColor Red
 }
 
-# PASSO 4: Buscar afericao por ID
 if ($global:afericaoId) {
     Write-Host ""
     Write-Host "[PASSO 4] Buscando afericao por ID ($($global:afericaoId))..." -ForegroundColor Yellow
@@ -102,7 +97,6 @@ if ($global:afericaoId) {
     }
 }
 
-# PASSO 5: Atualizar afericao
 if ($global:afericaoId) {
     Write-Host ""
     Write-Host "[PASSO 5] Atualizando afericao..." -ForegroundColor Yellow
@@ -129,7 +123,6 @@ if ($global:afericaoId) {
     }
 }
 
-# PASSO 6: Deletar afericao
 if ($global:afericaoId) {
     Write-Host ""
     Write-Host "[PASSO 6] Deletando afericao..." -ForegroundColor Yellow

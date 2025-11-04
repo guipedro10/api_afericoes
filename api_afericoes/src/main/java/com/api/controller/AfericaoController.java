@@ -1,7 +1,7 @@
-package com.apijob.controller;
+package com.api.controller;
 
-import com.apijob.model.Afericao;
-import com.apijob.service.AfericaoService;
+import com.api.model.Afericao;
+import com.api.service.AfericaoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
